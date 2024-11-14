@@ -10,13 +10,13 @@ document.getElementById('messageInput').addEventListener('keydown', function(eve
 });
 
 function playNotificationSound() {
-    const audio = new Audio('audio/notificatione.mp3'); // Ruta del archivo de sonido
+    const audio = new Audio('/audio/notificatione.mp3'); // Cambia según la estructura de tu proyecto.
     audio.play().catch(error => console.log("Error reproduciendo el sonido:", error));
 }   
 
 function connect() {
     const username = document.getElementById('username').value;
-    socket = new WebSocket(`https://sid-2024-orozco21s-projects.vercel.app/ws/${username}`);
+    socket = new WebSocket(`wss://sid-2024-orozco21s-projects.vercel.app/ws/${username}`);
 
     socket.onopen = () => {
         document.getElementById('username').style.display = 'none';
