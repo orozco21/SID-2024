@@ -181,54 +181,80 @@ button:hover {
     display: inline;
 }
 
-/* Media Queries para dispositivos móviles */
-@media only screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+/* --- Estilos Responsive --- */
+
+/* En pantallas más pequeñas (por ejemplo, móviles) */
+@media (max-width: 768px) {
+    /* Hacer que el sidebar ocupe toda la pantalla */
     .sidebar {
-        width: 100%;
         position: relative;
+        width: 100%;
         height: auto;
+        box-shadow: none;
+        border-right: none;
     }
+
+    /* La zona de chat debe ocupar toda la pantalla */
     .chat-area {
         width: 100%;
         margin-left: 0;
     }
-    .header-container {
-        flex-direction: column;
+
+    /* Ajustar tamaño de fuente en la cabecera */
+    .header-title {
+        font-size: 20px;
     }
+
+    /* Cambiar el tamaño de la imagen del logo */
     .header-image {
         width: 100px;
         height: 45px;
     }
+
+    /* Los mensajes deben ocupar más espacio en pantallas pequeñas */
+    #messages li {
+        max-width: 80%;
+    }
+
+    /* Asegurarse de que los botones tengan un tamaño adecuado */
+    .sidebar input, .sidebar button, #messageInput, button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .message-input-container {
+        flex-direction: column;
+    }
+
+    button {
+        margin-top: 10px;
+    }
+}
+
+/* En pantallas muy pequeñas (por ejemplo, móviles más pequeños) */
+@media (max-width: 480px) {
+    /* Reducir la altura de los botones y entradas */
+    .sidebar input, .sidebar button, #messageInput, button {
+        padding: 8px;
+    }
+
     .header-title {
         font-size: 18px;
     }
-}
 
-/* Media Queries para dispositivos móviles verticales */
-@media only screen and (max-width: 480px) {
-    .sidebar {
-        display: none;
+    /* Reducir márgenes de los mensajes */
+    #messages li {
+        margin-bottom: 5px;
+        padding: 8px;
     }
-    .chat-area {
-        width: 100%;
-    }
-    .message-input-container {
-        padding: 5px;
-    }
-}
 
-/* Media Queries para dispositivos móviles horizontales */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    .sidebar {
-        width: 50%;
+    .header-image {
+        width: 80px;
+        height: 40px;
     }
-    .chat-area {
-        width: 50%;
-    }
-    .message-input-container {
-        padding: 10px;
+
+    /* Ajustar el layout */
+    .container {
+        flex-direction: column;
     }
 }
