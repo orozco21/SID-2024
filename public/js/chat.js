@@ -16,7 +16,7 @@ function playNotificationSound() {
 
 function connect() {
     const username = document.getElementById('username').value;
-    socket = new WebSocket(`wss://sid-2024-orozco21s-projects.vercel.app/ws/${username}`);
+    socket = new WebSocket(`wss://sid-2024.vercel.app/ws/${username}`);
 
     socket.onopen = () => {
         document.getElementById('username').style.display = 'none';
