@@ -16,7 +16,7 @@ function playNotificationSound() {
 
 function connect() {
     const username = document.getElementById('username').value;
-    socket = new WebSocket(`https://apiv4-xj42.onrender.com/${username}`);
+    socket = new WebSocket(`wss://apiv4-xj42.onrender.com/${username}`);
 
     socket.onopen = () => {
         document.getElementById('username').style.display = 'none';
