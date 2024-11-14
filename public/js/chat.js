@@ -10,7 +10,7 @@ document.getElementById('messageInput').addEventListener('keydown', function(eve
 });
 
 function playNotificationSound() {
-    const audio = new Audio('/audio/notificatione.mp3'); // Cambia según la estructura de tu proyecto.
+    const audio = new Audio('https://raw.githubusercontent.com/orozco21/SID-2024/main/audio/notificatione.mp3'); // Cambia según la estructura de tu proyecto.
     audio.play().catch(error => console.log("Error reproduciendo el sonido:", error));
 }   
 
