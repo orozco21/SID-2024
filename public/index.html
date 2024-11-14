@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SID chat</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>    
+    <div class="container">
+        <div class="sidebar">
+            <div class="header-container">
+                <img src="https://isi.ul.edu.co/pluginfile.php/1/theme_moove/logo/1730498714/Logos%20versiones%20y%20PNG_HORIZONTAL%20LETRA%20AZUL.png" alt="Logo" class="header-image">
+                <h1 class="header-title">ZISVIIIA-Sistemas Distribuidos</h1>
+                <h1 class="header-title">SID Chat</h1>
+            </div>
+            <input type="text" id="username" placeholder="Tu nombre" />
+            <button onclick="connect()">Unirse</button>
+            <h2>Usuarios conectados</h2>
+            <ul id="userList"></ul>
+        </div>
+        <div class="chat-area" id="chatBox" style="display: none;">
+            <div class="chat-header">
+                <h3>Conversación con <span id="chatWith"></span></h3>
+            </div>
+            <ul id="messages"></ul>
+            <div class="message-input-container">
+                <input type="text" id="messageInput" placeholder="Escribe un mensaje..." />
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/chat.js"></script>
+</body>
+</html>
